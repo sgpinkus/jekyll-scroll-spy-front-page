@@ -22,7 +22,7 @@ exclude:
 # First page is home page. No link is shown for it.
 fronts:
   - home.html
-  - products.html
+  - services.html
   - about.html
   - contact.html
 full_background_image: assets/full-background-image.jpg
