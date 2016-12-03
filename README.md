@@ -3,6 +3,8 @@ jekyll-scroll-spy-front-page is a simple all in one page single page Jekyll them
 
 You can use it as a project or a theme with minor modifications, but it's setup to be used as a basis for a full site.
 
+[Sample site](https://sam-at-github.github.io/jekyll-scroll-spy-front-page/).
+
 ## Installation a project
 
   git clone git@github.com:sam-at-github/jekyll-scroll-spy-front-page.git my-site
