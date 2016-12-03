@@ -24,7 +24,7 @@ body {
 .footer {
   min-height: 50px;
   background-color: #222;
-  color: #fff; /*#9d9d9d;*/
+  color: #9d9d9d;
 }
 
 .footer ul {
@@ -36,6 +36,7 @@ body {
   list-style-type: none;
   display: inline-block;
   height: 50px;
+  line-height: 50px;
 }
 
 .footer li:not(:first-child):before {
