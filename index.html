@@ -12,45 +12,49 @@ layout: default
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/assets/css/index.css" />
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar">
     <header>
-      <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-          {% if site.nav_logo %}
-            <img src="{{ site.nav_logo }}" alt="logo" />
-          {% else %}
-            Home
-          {% endif %}
-          </a>
-        </div>
-        <!-- menu -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav" role="tablist">
-          {% assign count = 0 %}
-          {% for page in site.fronts %}
-            {% if count == 0 %}
-              {% assign count = 1 %}
-              {% continue %}
+      <nav id="navbar" class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+            {% if site.nav_logo %}
+              <img src="{{ site.nav_logo }}" alt="logo" />
+            {% else %}
+              Home
             {% endif %}
-            {% assign name = page | split: "." | first | slugify %}
-            {% assign title = name | capitalize %}
-            <li role="presentation">
-              <a href="#{{ name }}" aria-controls="messages">{{ title }}</a>
-            </li>
-          {% endfor %}
-          </ul>
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+            {% assign count = 0 %}
+            {% for page in site.fronts %}
+              {% if count == 0 %}
+                {% assign count = 1 %}
+                {% continue %}
+              {% endif %}
+              {% assign name = page | split: "." | first | slugify %}
+              {% assign title = name | capitalize %}
+              <li role="presentation">
+                <a href="#{{ name }}" aria-controls="messages">{{ title }}</a>
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
-    <!-- pages -->
+
+    <!-- List of pages -->
     <section class="front-container">
     {% assign count = 0 %}
     {% for page in site.fronts %}
@@ -65,14 +69,14 @@ layout: default
         {% continue %}
       {% endif %}
       <article class="front">
-        <a name="{{ name }}" style="position:relative; top:-40px;"></a>
+        <a id="{{ name  }}" name="{{ name }}" style="position:relative; top:-40px;"></a>
         <h1>{{ title }}</h1>
         {% include_relative {{ page }} %}
       </article>
     {% endfor %}
-    <footer>
-        {% include footer.html %}
-    </footer>
+    <div class="footer">
+      {% include footer.html %}
+    </div>
     </section>
   </body>
 </html>

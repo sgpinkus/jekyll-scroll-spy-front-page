@@ -1,5 +1,12 @@
+---
+---
 html, body {
   height: 100%; margin: 0; padding: 0; border: 0;
+}
+body {
+  background-image: url({{ site.full_background_image }}); /* /assets/full-background-image.jpg); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .front-container {
   height: 100%;
@@ -15,9 +22,23 @@ html, body {
   height: 40px;
 }
 
+.footer {
+  min-height: 50px;
+  background-color: #222;
+  color: #fff; /*#9d9d9d;*/
+}
 
-footer {
-  height: 40px;
-  width: 100%;
-  background-color: black;
+.footer ul {
+  padding: 0;
+  margin: 0 !important;
+}
+
+.footer li {
+  list-style-type: none;
+  display: inline-block;
+  height: 50px;
+}
+
+.footer li:not(:first-child):before {
+  content: " | "
 }

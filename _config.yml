@@ -19,9 +19,13 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-# First page is hme page. No link.
+# First page is home page. No link is shown for it.
 fronts:
   - home.html
   - products.html
   - about.html
   - contact.html
+full_background_image: /assets/full-background-image.jpg
+designer:
+  name: sam-at-github
+  url: https://github.io/sam-at-github/

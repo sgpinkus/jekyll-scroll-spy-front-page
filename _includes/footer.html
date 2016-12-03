@@ -1,5 +1,4 @@
-{% include social.html %}
-<p class="text-center">
-  <span>&copy; {{ site.title }} {{ site.subtitle }}</span>&nbsp;|&nbsp;
-	<span>Design: <a href="{{ site.designer }}" target="_blank">Me</a></span>
-</p>
+<ul class="text-center">
+  <li>&copy; <a href="#">{{ site.title }} {{ site.subtitle }}</a></li>
+	{% if site.designer %}<li>By: <a href="{{ site.designer.url }}" target="_blank">{{ site.designer.name }}</a></li>{% endif %}
+</div>
