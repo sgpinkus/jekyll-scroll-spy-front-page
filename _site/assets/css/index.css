@@ -1,0 +1,42 @@
+html, body {
+  height: 100%; margin: 0; padding: 0; border: 0;
+}
+body {
+  background-image: url(/assets/full-background-image.jpg); /* /assets/full-background-image.jpg); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.front-container {
+  height: 100%;
+}
+.front {
+  min-height: 100%;
+  padding: 50px;
+  margin: 50px auto 50px auto;
+  max-width:1280px;
+  border: solid 1px #000;
+}
+.navbar {
+  height: 40px;
+}
+
+.footer {
+  min-height: 50px;
+  background-color: #222;
+  color: #fff; /*#9d9d9d;*/
+}
+
+.footer ul {
+  padding: 0;
+  margin: 0 !important;
+}
+
+.footer li {
+  list-style-type: none;
+  display: inline-block;
+  height: 50px;
+}
+
+.footer li:not(:first-child):before {
+  content: " | "
+}
