@@ -9,8 +9,11 @@ email: your-email@domain.com
  # Write an awesome description for your new site here. You can edit this
 baseurl: "/jekyll-scroll-spy-front-page"
 url: ""
-twitter_username: jekyllrb
-github_username:  jekyll
+brand_logo: "assets/brand-logo.png"
+# See _data/social_sites_db.yml for list of support sites.
+social_link_urls:
+  github: https://github.com/sam-at-github
+  stack-overflow: https://stackoverflow.com/users/2038383/s-pinkus
 # Build settings
 markdown: kramdown
 # theme: minima
@@ -19,7 +22,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-# First page is home page. No link is shown for it.
+  - tests/
+# First page is home page. No link is shown for it. These should also be excluded!
 fronts:
   - home.html
   - services.html
