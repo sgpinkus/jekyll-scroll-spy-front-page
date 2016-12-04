@@ -7,6 +7,9 @@
     <meta charset="utf-8" />
     <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    {% if site.google_analytics_id %}
+    <script src="{{ site.baseurl }}/assets/js/google-analytics.js"></script>
+    {% endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}/bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/bower_components/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css" />
