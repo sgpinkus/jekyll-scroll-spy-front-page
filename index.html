@@ -24,10 +24,8 @@ layout: index
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="display: flex; flex-flow: row wrap;">
           <ul class="nav navbar-nav">
-          {% assign count = 0 %}
           {% for page in site.fronts %}
-            {% if count == 0 %}
-              {% assign count = 1 %}
+            {% if forloop.first %}
               {% continue %}
             {% endif %}
             {% assign name = page | split: "." | first | slugify %}
@@ -47,22 +45,20 @@ layout: index
 
   <!-- List of pages -->
   <section class="front-container">
-  {% assign count = 0 %}
   {% for page in site.fronts %}
     {% assign name = page | split: "." | first | slugify %}
     {% assign title = name | capitalize %}
-    {% if count == 0 %}
-      {% assign count = 1 %}
+    {% if forloop.first %}
       <article class="front">
         <a name="{{ name }}"></a>
-        {% include_relative {{ page }} %}
+        {% include_relative _fronts/{{ page }} %}
       </article>
       {% continue %}
     {% endif %}
     <article class="front">
       <a id="{{ name  }}" name="{{ name }}" style="position:relative; top:-40px;"></a>
       <h1>{{ title }}</h1>
-      {% include_relative {{ page }} %}
+      {% include_relative _fronts/{{ page }} %}
     </article>
   {% endfor %}
   <div class="footer">

@@ -23,7 +23,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - tests/
-# First page is home page. No link is shown for it. These should also be excluded!
+# First page is home page. No link is shown for it. These pages must be in _fronts/.
 fronts:
   - home.html
   - services.html
