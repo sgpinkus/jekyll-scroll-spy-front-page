@@ -2,7 +2,7 @@ html, body {
   height: 100%; margin: 0; padding: 0; border: 0;
 }
 body {
-  background-image: url(/jekyll-scroll-spy-front-page/assets/full-background-image.jpg); /* assets/full-background-image.jpg); */
+  background-image: url(/assets/full-background-image.jpg); /* assets/full-background-image.jpg); */
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -16,7 +16,7 @@ body {
   max-width:1280px;
 }
 .navbar {
-  height: 40px;
+  min-height: 40px;
 }
 
 .footer {

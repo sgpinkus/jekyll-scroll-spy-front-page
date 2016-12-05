@@ -2,16 +2,17 @@
 <html>
   <head>
     <title>Your awesome title</title>
+    <base href="/">
     <meta charset="utf-8" />
-    <script src="/jekyll-scroll-spy-front-page/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/jekyll-scroll-spy-front-page/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     
-    <script src="/jekyll-scroll-spy-front-page/assets/js/google-analytics.js"></script>
+    <script src="/assets/js/google-analytics.js"></script>
     
-    <link rel="stylesheet" href="/jekyll-scroll-spy-front-page/bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="/jekyll-scroll-spy-front-page/bower_components/font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="/jekyll-scroll-spy-front-page/assets/css/index.css" />
-    <link rel="stylesheet" href="/jekyll-scroll-spy-front-page/assets/css/font-awesome-social-name-before.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/font-awesome-social-name-before.css" />
   </head>
   <body data-spy="scroll" data-target="#navbar">
   <header>
@@ -26,7 +27,7 @@
             <span class="icon-bar"></span>
           </button>
           
-             <a class="navbar-brand" style="padding:0" href="#"><img src="/jekyll-scroll-spy-front-page/assets/brand-logo.png" alt="home" /></a>
+             <a class="navbar-brand" style="padding:0" href="#"><img src="/assets/brand-logo.png" alt="home" /></a>
           
         </div>
 
@@ -58,8 +59,7 @@
             </li>
           
           </ul>
-          <div class="text-right">
-          <ul class="social-links nav navbar-nav navbar-right">
+          <ul class="social-links nav navbar-nav navbar-right text-right">
 
   
 
@@ -135,7 +135,6 @@
 
 </ul>
 
-          </div>
         </div>
       </div>
     </nav>
@@ -179,15 +178,19 @@
     <article class="front">
       <a id="contact" name="contact" style="position:relative; top:-40px;"></a>
       <h1>Contact</h1>
-      <div>
-  <ul>
-    <li>Ph: 0401123 456</li>
-    <li>Em: your-email@domain.com</li>
-  </ul>
-  <div><div class="map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.8113019733796!2d145.13227541560468!3d-37.91147307973475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66acbf64673b9%3A0xfaf9b169a587104!2sMonash+University+Clayton+Campus!5e0!3m2!1sen!2sau!4v1480658098917"></iframe>
-</div>
-</div>
+      <div class="row flex-row">
+  <div class="col-xs-6">
+    <address>
+      <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+    <address>
+      <abbr title="Email">E:</abbr> <a href="mailto:#">your-email@domain.com</a>
+    </address>
+  </div>
+    <div class="col-xs-6 container-fluid">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.8113019733796!2d145.13227541560468!3d-37.91147307973475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66acbf64673b9%3A0xfaf9b169a587104!2sMonash+University+Clayton+Campus!5e0!3m2!1sen!2sau!4v1480658098917"></iframe>
+
+  </div>
 </div>
 
     </article>
