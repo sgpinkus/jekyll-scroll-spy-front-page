@@ -9,9 +9,6 @@ baseurl: "/"
 url: ""
 brand_logo: "/assets/brand-logo.png"
 # See _data/social_sites_db.yml for list of support sites.
-social_link_urls:
-  github: https://github.com/sam-at-github
-  stack-overflow: https://stackoverflow.com/users/2038383/s-pinkus
 # Build settings
 markdown: kramdown
 gems:
@@ -20,12 +17,15 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - tests/
+  - vendor/
+  - bower.json
 # First page is home page. No link is shown for it. These pages must be in _fronts/.
 fronts:
   - home.html
   - services.html
   - about.html
   - contact.html
+default_front_titles: True
 full_background_image: /assets/full-background-image.jpg
 designer:
   name: sam-at-github

@@ -55,7 +55,9 @@ layout: index
     {% endif %}
     <article class="front">
       <a id="{{ name  }}" name="{{ name }}" style="position:relative; top:-40px;"></a>
-      <h1>{{ title }}</h1>
+      {% if site.default_front_titles %}
+        <h1>{{ title }}</h1>
+      {% endif %}
       {% include_relative _fronts/{{ page }} %}
     </article>
   {% endfor %}
