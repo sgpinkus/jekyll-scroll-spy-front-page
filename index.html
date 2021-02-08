@@ -46,17 +46,12 @@ layout: index
   {% for page in site.fronts %}
     {% assign name = page | split: "." | first | slugify %}
     {% assign title = name | capitalize %}
-    {% if forloop.first %}
-      <article class="front">
-        <a name="{{ name }}"></a>
-        {% include_relative _fronts/{{ page }} %}
-      </article>
-      {% continue %}
-    {% endif %}
     <article class="front">
       <a id="{{ name  }}" name="{{ name }}" style="position:relative; top:-40px;"></a>
       {% if site.default_front_titles %}
-        <h1>{{ title }}</h1>
+        {% if forloop.first == false or site.home_front_title %}
+          <h1>{{ title }}</h1>
+        {% endif %}
       {% endif %}
       {% include_relative _fronts/{{ page }} %}
     </article>
