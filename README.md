@@ -1,7 +1,7 @@
 # Overview
 jekyll-scroll-spy-front-page is a very simple single page Jekyll theme, using [bootstrap scroll-spy](https://getbootstrap.com/javascript/) to navigate between a set of pages you tell it to include on the index page.
 
-You can use it as a project or a theme with minor modifications, but it's setup to be used as a basis for a full site. [Sample site](https://sgpinkus.github.io/jekyll-scroll-spy-front-page/).
+[Sample site](https://sgpinkus.github.io/jekyll-scroll-spy-front-page/).
 
 # Installation
 
@@ -17,7 +17,7 @@ EOF
 
 # Build
 ```
-git clone git@github.com:sgpinkus/jekyll-scroll-spy-front-page.git my-site
+git clone git@github.com:sgpinkus/jekyll-bootstrap-structure.git my-site
 cd my-site
 npm i
 edit _config.yml _fronts/* # Edit pages.

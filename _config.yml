@@ -19,18 +19,11 @@ exclude:
   - tests/
   - package.json
   - package-lock.json
+  - scroll-spy-front-page.gemspec
+  - README.md
+  - LICENSE.txt
 include:
-  # Jekyll >3.6 won't just let me include an excluded dir?! Grrr.
-  - node_modules/jquery/dist/jquery.min.js
-  - node_modules/bootstrap/dist/js/bootstrap.min.js
-  - node_modules/bootstrap/dist/css/bootstrap.css
-  - node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2
-  - node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff
-  - node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf
-  - node_modules/font-awesome/css/font-awesome.min.css
-  - node_modules/font-awesome/fonts/fontawesome-webfont.woff2
-  - node_modules/font-awesome/fonts/fontawesome-webfont.woff
-  - node_modules/font-awesome/fonts/fontawesome-webfont.ttf
+  - node_modules
 # First page is home page. No link is shown for it. These pages must be in _fronts/.
 fronts:
   - home.html
