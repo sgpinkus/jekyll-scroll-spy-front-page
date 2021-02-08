@@ -1,8 +1,20 @@
----
-# index page of site
-layout: index
----
-<body data-spy="scroll" data-target="#navbar">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your awesome title</title>
+    <base href="/">
+    <meta charset="utf-8" />
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <script src="/assets/js/google-analytics.js"></script>
+    
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/font-awesome-social-name-before.css" />
+  </head>
+  <body data-spy="scroll" data-target="#navbar">
   <header>
     <nav id="navbar" class="navbar navbar-default navbar-fixed-top navbar-inverse">
       <div class="container-fluid">
@@ -14,28 +26,100 @@ layout: index
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          {% if site.brand_logo %}
-             <a class="navbar-brand" style="padding:0" href="#"><img src="{{ site.brand_logo }}" alt="home" /></a>
-          {% else %}
-             <a class="navbar-brand" href="#">Home</a>
-          {% endif %}
+          
+             <a class="navbar-brand" style="padding:0" href="#"><img src="/assets/brand-logo.png" alt="home" /></a>
+          
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-          {% for page in site.fronts %}
-            {% if forloop.first %}
-              {% continue %}
-            {% endif %}
-            {% assign name = page | split: "." | first | slugify %}
-            {% assign title = name | capitalize %}
+          
+            
+              
+            
+            
+            
             <li role="presentation">
-              <a href="#{{ name }}" aria-controls="messages">{{ title }}</a>
+              <a href="#services" aria-controls="messages">Services</a>
             </li>
-          {% endfor %}
+          
+            
+            
+            
+            <li role="presentation">
+              <a href="#about" aria-controls="messages">About</a>
+            </li>
+          
+            
+            
+            
+            <li role="presentation">
+              <a href="#contact" aria-controls="messages">Contact</a>
+            </li>
+          
           </ul>
-          {% include social-links.html size="2x" class="nav navbar-nav navbar-right text-right" %}
+          <ul class="social-links nav navbar-nav navbar-right text-right">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</ul>
+
         </div>
       </div>
     </nav>
@@ -43,26 +127,80 @@ layout: index
 
   <!-- List of pages -->
   <section class="front-container">
-  {% for page in site.fronts %}
-    {% assign name = page | split: "." | first | slugify %}
-    {% assign title = name | capitalize %}
-    {% if forloop.first %}
-      <article class="front">
-        <a name="{{ name }}"></a>
-        {% include_relative _fronts/{{ page }} %}
-      </article>
-      {% continue %}
-    {% endif %}
+  
+    
+    
     <article class="front">
-      <a id="{{ name  }}" name="{{ name }}" style="position:relative; top:-40px;"></a>
-      {% if site.default_front_titles %}
-        <h1>{{ title }}</h1>
-      {% endif %}
-      {% include_relative _fronts/{{ page }} %}
+      <a id="home" name="home" style="position:relative; top:-40px;"></a>
+      
+        
+          <h1>Home</h1>
+        
+      
+      <p>landing...</p>
+
     </article>
-  {% endfor %}
+  
+    
+    
+    <article class="front">
+      <a id="services" name="services" style="position:relative; top:-40px;"></a>
+      
+        
+          <h1>Services</h1>
+        
+      
+      <p>services...</p>
+
+    </article>
+  
+    
+    
+    <article class="front">
+      <a id="about" name="about" style="position:relative; top:-40px;"></a>
+      
+        
+          <h1>About</h1>
+        
+      
+      <p>about...</p>
+
+    </article>
+  
+    
+    
+    <article class="front">
+      <a id="contact" name="contact" style="position:relative; top:-40px;"></a>
+      
+        
+          <h1>Contact</h1>
+        
+      
+      <div class="row flex-row">
+  <div class="col-xs-6">
+    <address>
+      <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+    <address>
+      <abbr title="Email">E:</abbr> <a href="mailto:#">your-email@domain.com</a>
+    </address>
+  </div>
+    <div class="col-xs-6 container-fluid">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.8113019733796!2d145.13227541560468!3d-37.91147307973475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66acbf64673b9%3A0xfaf9b169a587104!2sMonash+University+Clayton+Campus!5e0!3m2!1sen!2sau!4v1480658098917"></iframe>
+
+  </div>
+</div>
+
+    </article>
+  
   <div class="footer">
-    {% include footer.html %}
+    <ul class="text-center">
+  <li><span class="glyphicon glyphicon-copyright-mark"></span>&nbsp;<a href="#">Your awesome title </a></li>
+	<li>By: <a href="https://github.io/sgpinkus/" target="_blank">sgpinkus</a></li>
+</ul>
+
   </div>
   </section>
 </body>
+
+</html>

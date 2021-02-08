@@ -1,44 +1,32 @@
 # Overview
-jekyll-scroll-spy-front-page is a simple all in one page single page Jekyll theme / project. It uses [bootstrap scroll-spy](https://getbootstrap.com/javascript/) to navigate between a set of pages you tell it to include on the index page. And that's about it.
+jekyll-scroll-spy-front-page is a very simple single page Jekyll theme, using [bootstrap scroll-spy](https://getbootstrap.com/javascript/) to navigate between a set of pages you tell it to include on the index page.
 
-You can use it as a project or a theme with minor modifications, but it's setup to be used as a basis for a full site.
+You can use it as a project or a theme with minor modifications, but it's setup to be used as a basis for a full site. [Sample site](https://sgpinkus.github.io/jekyll-scroll-spy-front-page/).
 
-[Sample site](https://sgpinkus.github.io/jekyll-scroll-spy-front-page/).
+# Installation
 
-## Installation a project
-
-  git clone git@github.com:sgpinkus/jekyll-scroll-spy-front-page.git my-site
-  cd my-site
-  npx bower install
-
-## Installation as a Theme
-Add this line to your Jekyll site's Gemfile:
-
-```ruby
-gem "jekyll-scroll-spy-front-page"
+### Install Jekyll
+```
+sudo apt-get install ruby-full build-essential zlib1g-dev
+echo >>~/.bashrc <<EOF
+# Install Ruby Gems to ~/local/gems
+export GEM_HOME="$HOME/local/gems"
+export PATH="$HOME/local/gems/bin:$PATH"
+EOF
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: jekyll-scroll-spy-front-page
+# Build
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-scroll-spy-front-page
-
-You also need to run `bower install` in projects that use this.
-
-## Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/sgpinkus/jekyll-scroll-spy-front-page. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-To set up your environment to develop this theme, run `bundle install`. Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal. When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
-
-## License
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+git clone git@github.com:sgpinkus/jekyll-scroll-spy-front-page.git my-site
+cd my-site
+npm i
+edit _config.yml _fronts/* # Edit pages.
+jekyll build
+jekyll serve # Test locally
+```
+# Host on Github
+```
+git remote add origin ...
+git subtree split --prefix=_site -b gh-pages
+git push origin gh-pages
+```
