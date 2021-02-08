@@ -28,6 +28,9 @@ include:
   - node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff
   - node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf
   - node_modules/font-awesome/css/font-awesome.min.css
+  - node_modules/font-awesome/fonts/fontawesome-webfont.woff2
+  - node_modules/font-awesome/fonts/fontawesome-webfont.woff
+  - node_modules/font-awesome/fonts/fontawesome-webfont.ttf
 # First page is home page. No link is shown for it. These pages must be in _fronts/.
 fronts:
   - home.html
@@ -37,6 +40,9 @@ fronts:
 default_front_titles: True
 home_front_title: True
 full_background_image: /assets/full-background-image.jpg
+social_link_urls:
+  github: https://github.com/sgpinkus
+  stack-overflow: https://stackoverflow.com/users/2038383/s-pinkus
 designer:
   name: sgpinkus
   url: https://github.io/sgpinkus/
