@@ -17,8 +17,17 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - tests/
-  - vendor/
-  - bower.json
+  - package.json
+  - package-lock.json
+include:
+  # Jekyll >3.6 won't just let me include an excluded dir?! Grrr. 
+  - node_modules/jquery/dist/jquery.min.js
+  - node_modules/bootstrap/dist/js/bootstrap.min.js
+  - node_modules/bootstrap/dist/css/bootstrap.css
+  - node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2
+  - node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff
+  - node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf
+  - node_modules/font-awesome/css/font-awesome.min.css
 # First page is home page. No link is shown for it. These pages must be in _fronts/.
 fronts:
   - home.html
