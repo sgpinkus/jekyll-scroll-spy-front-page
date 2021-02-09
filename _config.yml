@@ -23,9 +23,10 @@ exclude:
   - README.md
   - LICENSE.txt
 include:
+  - .nojekyll # https://www.bennadel.com/blog/3181-including-node-modules-and-vendors-folders-in-your-github-pages-site.htm
   - node_modules
-# First page is home page. No link is shown for it. These pages must be in _fronts/.
 fronts:
+  # First page is home page. No link is shown for it. These pages must be in _fronts/.
   - home.html
   - services.html
   - about.html
