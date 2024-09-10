@@ -1,7 +1,7 @@
 ---
 ---
 html, body {
-  height: 100%; margin: 0; padding: 0; border: 0;
+  height: 100vh; margin: 0; padding: 0; border: 0;
 }
 body {
   background-image: url({{ site.full_background_image }}); /* assets/full-background-image.jpg); */
@@ -41,4 +41,12 @@ body {
 
 .footer li:not(:first-child):before {
   content: " | "
+}
+
+.nav {
+  border: 0;
+}
+
+.header {
+  height: fit-content;
 }

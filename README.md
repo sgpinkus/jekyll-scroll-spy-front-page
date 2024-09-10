@@ -17,12 +17,12 @@ EOF
 
 # Build
 ```
-git clone git@github.com:sgpinkus/jekyll-bootstrap-structure.git my-site
-cd my-site
+git clone https://github.com/sgpinkus/jekyll-scroll-spy-front-page my-site  && cd my-site
 npm i
+bundle install
 edit _config.yml _fronts/* # Edit pages.
 jekyll build
-jekyll serve # Test locally
+jekyll serve -b /jekyll-scroll-spy-front-page/ # Test locally
 ```
 # Host on Github
 ```
