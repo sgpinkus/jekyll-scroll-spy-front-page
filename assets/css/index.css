@@ -3,7 +3,7 @@
 html, body {
   height: 100vh; margin: 0; padding: 0; border: 0;
 }
-body {
+html, body {
   /* background-image: url({{ site.full_background_image }}); */
   background-image: url(/assets/full-background-image.jpg);
   background-repeat: repeat-x;
@@ -45,7 +45,7 @@ body {
 }
 
 .nav {
-  border: 0;
+  border: 0px !important;
 }
 
 .header {
