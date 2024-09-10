@@ -22,7 +22,7 @@ npm i
 bundle install
 edit _config.yml _fronts/* # Edit pages.
 jekyll build
-jekyll serve -b /jekyll-scroll-spy-front-page/ # Test locally
+jekyll serve
 ```
 # Host on Github
 ```

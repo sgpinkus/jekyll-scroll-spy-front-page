@@ -5,7 +5,6 @@
 # in the templates via {{ site.myvariable }}.
 title: Your awesome title
 email: your-email@domain.com
-# baseurl: "/jekyll-scroll-spy-front-page/"
 url: ""
 brand_logo: "assets/brand-logo.png"
 # See _data/social_sites_db.yml for list of support sites.
@@ -33,10 +32,10 @@ fronts:
   - contact.html
 default_front_titles: True
 home_front_title: True
-full_background_image: /assets/full-background-image.jpg
+# full_background_image: /assets/full-background-image.jpg
 social_link_urls:
   github: https://github.com/sgpinkus
-  stack-overflow: https://stackoverflow.com/users/2038383/s-pinkus
+  stack-overflow: https://stackoverflow.com/
 designer:
   name: sgpinkus
   url: https://github.io/sgpinkus/
